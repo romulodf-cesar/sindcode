@@ -52,4 +52,6 @@ A UC visa aplicar metodologias ágeis e tecnologias modernas para a criação de
 - Entre no site para gerar gitignore: https://www.toptal.com/developers/gitignore/api/django
 - Entre no github e crie novo repositório: https://github.com/romulodf-cesar/sindcode
 - Usar commit especificando a tarefa do SCRUM: git commit -m "<<codigo-task>> <<mensagem>> <<#status>>"
+- Aprendi a vincular o post-it
+- 
 
