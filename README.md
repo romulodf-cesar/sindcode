@@ -54,4 +54,5 @@ A UC visa aplicar metodologias ágeis e tecnologias modernas para a criação de
 - Usar commit especificando a tarefa do SCRUM: git commit -m "<<codigo-task>> <<mensagem>> <<#status>>"
 - Aprendi a vincular o post-it
 - Aprender Django Apps
+- O aplicativo do Django é como se fosse um módulo
 
