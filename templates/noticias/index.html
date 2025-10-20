@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sindcode | FAQ do Programador Python</title>
+    <!-- Carrega o Tailwind CSS para o estilo (Single-file Mandate) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sind-primary': '#385C95', // Um tom de azul forte
+                        'sind-secondary': '#FFC300', // Um amarelo/dourado de destaque
+                        'sind-dark': '#1F2937',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilo personalizado para o fundo da seção de perguntas e respostas */
+        .faq-bg {
+            background-color: #f9f9f9;
+        }
+        /* Estilo para garantir que o ícone de seta esteja no final */
+        .faq-header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-sind-dark min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-sind-primary shadow-lg p-6 md:p-10">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-2">
+                <span class="text-sind-secondary">Sindcode</span> | FAQ
+            </h1>
+            <p class="text-white text-lg md:text-xl font-light">
+                As dúvidas mais comuns da nossa comunidade Python em Brasília, explicadas de forma simples e didática.
+            </p>
+        </div>
+    </header>
+
+    <!-- FAQ Section (Accordion) -->
+    <section class="max-w-4xl mx-auto py-8 px-4 md:py-12 md:px-8">
+
+        <h2 class="text-3xl font-bold mb-8 text-sind-dark">Dúvidas Frequentes do Desenvolvedor</h2>
+
+        <div id="faq-container" class="space-y-4">
+
+            <!-- Template de Item do FAQ -->
+            <!-- Cada item deve ter um 'data-id' e uma função 'toggleAnswer' para interatividade -->
+
+            <!-- Pergunta 1: PyCharm Terminal -->
+            <div class="faq-item bg-white shadow-xl rounded-xl overflow-hidden transition-all duration-300" data-id="q1">
+                <button onclick="toggleAnswer('q1')" class="w-full text-left p-5 md:p-6 text-xl font-semibold text-sind-primary hover:bg-gray-100 focus:outline-none transition-colors duration-200">
+                    <div class="faq-header-content">
+                        <span>1. Como abro o terminal do PyCharm?</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                </button>
+                <div id="q1-answer" class="faq-answer p-5 md:p-6 pt-0 border-t border-gray-200 hidden">
+                    <p class="text-gray-700">
+                        O terminal do PyCharm é como um <strong>"Portal Mágico"</strong> que te conecta diretamente ao sistema operacional, mas já no diretório do seu projeto.
+                    </p>
+                    <p class="mt-3 text-gray-700">
+                        <strong>Passo Didático:</strong> Simplesmente procure pela aba **"Terminal"** que fica na parte inferior da sua janela do PyCharm. Clique nela e pronto!
+                    </p>
+                    <p class="mt-3 text-gray-700">
+                        <strong>Dica de Mestre:</strong> Use o atalho universal <code class="bg-gray-200 p-1 rounded font-mono">Alt + F12</code> (ou <code class="bg-gray-200 p-1 rounded font-mono">Option + F12</code> no macOS) para abrir e fechar a aba instantaneamente.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Pergunta 2: Porque o gitignore tá grande? -->
+            <div class="faq-item bg-white shadow-xl rounded-xl overflow-hidden transition-all duration-300" data-id="q2">
+                <button onclick="toggleAnswer('q2')" class="w-full text-left p-5 md:p-6 text-xl font-semibold text-sind-primary hover:bg-gray-100 focus:outline-none transition-colors duration-200">
+                    <div class="faq-header-content">
+                        <span>2. Por que o arquivo `.gitignore` costuma ser tão grande?</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                </button>
+                <div id="q2-answer" class="faq-answer p-5 md:p-6 pt-0 border-t border-gray-200 hidden">
+                    <p class="text-gray-700">
+                        Pense no `.gitignore` como uma <strong>"Lista de Exclusão do Detetive Git"</strong>.
+                    </p>
+                    <p class="mt-3 text-gray-700">
+                        Ele é grande porque precisa listar todos os "arquivos lixo" ou "arquivos temporários" que o Git não deve rastrear:
+                        <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-700">
+                            <li><strong>Ambientes Virtuais (<code class="bg-gray-200 p-1 rounded font-mono">venv/</code>):</strong> Extremamente grandes e exclusivos do seu computador.</li>
+                            <li><strong>Arquivos de Cache (<code class="bg-gray-200 p-1 rounded font-mono">__pycache__</code>, <code class="bg-gray-200 p-1 rounded font-mono">.pytest_cache</code>):</strong> Gerados em tempo de execução.</li>
+                            <li><strong>Arquivos da IDE (<code class="bg-gray-200 p-1 rounded font-mono">.idea/</code>):</strong> Configurações pessoais do seu PyCharm ou VS Code.</li>
+                            <li><strong>Segredos (<code class="bg-gray-200 p-1 rounded font-mono">.env</code>):</strong> Não devem ser públicos.</li>
+                        </ul>
+                    </p>
+                    <p class="mt-3 text-gray-700">
+                        O objetivo é garantir que seu repositório Git contenha **apenas o código-fonte essencial**.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Pergunta 3: Porque o .env não subiu? -->
+            <div class="faq-item bg-white shadow-xl rounded-xl overflow-hidden transition-all duration-300" data-id="q3">
+                <button onclick="toggleAnswer('q3')" class="w-full text-left p-5 md:p-6 text-xl font-semibold text-sind-primary hover:bg-gray-100 focus:outline-none transition-colors duration-200">
+                    <div class="faq-header-content">
+                        <span>3. Por que o arquivo <code class="font-mono">.env</code> não foi enviado para o repositório Git?</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                </button>
+                <div id="q3-answer" class="faq-answer p-5 md:p-6 pt-0 border-t border-gray-200 hidden">
+                    <p class="text-gray-700">
+                        O `.env` não subiu porque ele é o <strong>"Cofre de Segredos"</strong> do seu projeto e, por padrão, está listado no seu `.gitignore`.
+                    </p>
+                    <p class="mt-3 text-gray-700">
+                        <strong>Princípio Básico de Segurança:</strong>
+                        <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-700">
+                            <li>Ele guarda chaves de API, senhas de banco de dados e credenciais que são específicas do ambiente onde o código está rodando.</li>
+                            <li>**Nunca** envie dados sensíveis para um repositório público (ou mesmo privado) do Git.</li>
+                        </ul>
+                    </p>
+                    <p class="mt-3 text-gray-700">
+                        Em vez do `.env`, você deve enviar um arquivo <code class="bg-gray-200 p-1 rounded font-mono">.env.example</code> (ou similar) mostrando quais variáveis são necessárias, mas sem os valores reais.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Pergunta 4: O que é manage.py? -->
+            <div class="faq-item bg-white shadow-xl rounded-xl overflow-hidden transition-all duration-300" data-id="q4">
+                <button onclick="toggleAnswer('q4')" class="w-full text-left p-5 md:p-6 text-xl font-semibold text-sind-primary hover:bg-gray-100 focus:outline-none transition-colors duration-200">
+                    <div class="faq-header-content">
+                        <span>4. O que é o arquivo <code class="font-mono">manage.py</code> no Django?</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                </button>
+                <div id="q4-answer" class="faq-answer p-5 md:p-6 pt-0 border-t border-gray-200 hidden">
+                    <p class="text-gray-700">
+                        O <code class="bg-gray-200 p-1 rounded font-mono">manage.py</code> é o <strong>"Controle Remoto"</strong> do seu Projeto Django.
+                    </p>
+                    <p class="mt-3 text-gray-700">
+                        Ele é um script de linha de comando que:
+                        <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-700">
+                            <li>Permite interagir com seu projeto sem precisar configurar variáveis de ambiente complexas.</li>
+                            <li>É usado para todas as tarefas administrativas, como:
+                                <code class="block bg-gray-200 p-2 my-1 rounded font-mono">python manage.py runserver</code> (Ligar o servidor)
+                                <code class="block bg-gray-200 p-2 my-1 rounded font-mono">python manage.py makemigrations</code> (Preparar mudanças no banco de dados)
+                                <code class="block bg-gray-200 p-2 my-1 rounded font-mono">python manage.py createsuperuser</code> (Criar um administrador)
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Pergunta 5: No Django um projeto é um conjunto de aplicativos? -->
+            <div class="faq-item bg-white shadow-xl rounded-xl overflow-hidden transition-all duration-300" data-id="q5">
+                <button onclick="toggleAnswer('q5')" class="w-full text-left p-5 md:p-6 text-xl font-semibold text-sind-primary hover:bg-gray-100 focus:outline-none transition-colors duration-200">
+                    <div class="faq-header-content">
+                        <span>5. No Django, um Projeto é um conjunto de Aplicativos?</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                </button>
+                <div id="q5-answer" class="faq-answer p-5 md:p-6 pt-0 border-t border-gray-200 hidden">
+                    <p class="text-gray-700">
+                        <strong>Sim, exatamente!</strong> A arquitetura do Django segue o princípio de <strong>"Projeto como Shopping Center"</strong>.
+                    </p>
+                    <p class="mt-3 text-gray-700">
+                        <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-700">
+                            <li>Um **Projeto** é o grande guarda-chuva: as configurações globais, a URL principal, o arquivo de `settings.py`.</li>
+                            <li>Um **Aplicativo (App)** é um módulo específico, uma loja dentro do shopping. Ele faz uma coisa e a faz bem. Ex: `UsersApp`, `BlogApp`, `PaymentsApp`.</li>
+                        </ul>
+                    </p>
+                    <p class="mt-3 text-gray-700">
+                        Essa modularidade torna seu código mais organizado, reutilizável e fácil de manter.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Pergunta 6: Os aplicativos interagem entre si? -->
+            <div class="faq-item bg-white shadow-xl rounded-xl overflow-hidden transition-all duration-300" data-id="q6">
+                <button onclick="toggleAnswer('q6')" class="w-full text-left p-5 md:p-6 text-xl font-semibold text-sind-primary hover:bg-gray-100 focus:outline-none transition-colors duration-200">
+                    <div class="faq-header-content">
+                        <span>6. Os aplicativos de um Projeto Django interagem entre si?</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                </button>
+                <div id="q6-answer" class="faq-answer p-5 md:p-6 pt-0 border-t border-gray-200 hidden">
+                    <p class="text-gray-700">
+                        <strong>Com certeza, e interagem muito!</strong> Eles são como **"Setores de uma Empresa"** que precisam colaborar para que a empresa funcione.
+                    </p>
+                    <p class="mt-3 text-gray-700">
+                        <strong>Exemplo Prático:</strong>
+                        <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-700">
+                            <li>O `BlogApp` precisa saber quem é o autor de um post. Ele faz isso referenciando o modelo `User` do `UsersApp`.</li>
+                            <li>O `PaymentsApp` (o setor financeiro) precisa interagir com o `ProductsApp` (o setor de estoque) para saber o que está vendendo.</li>
+                        </ul>
+                    </p>
+                    <p class="mt-3 text-gray-700">
+                        A interação se dá através da importação de modelos (<code class="bg-gray-200 p-1 rounded font-mono">from app_name.models import ModelName</code>), chamadas de métodos, e do sistema de Sinais e Mensagens do Django.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Pergunta 7: Pip install Python-dotenv? (E a 13) -->
+            <div class="faq-item bg-white shadow-xl rounded-xl overflow-hidden transition-all duration-300" data-id="q7">
+                <button onclick="toggleAnswer('q7')" class="w-full text-left p-5 md:p-6 text-xl font-semibold text-sind-primary hover:bg-gray-100 focus:outline-none transition-colors duration-200">
+                    <div class="faq-header-content">
+                        <span>7. & 13. Como instalar e para que serve o pacote <code class="font-mono">python-dotenv</code>?</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                </button>
+                <div id="q7-answer" class="faq-answer p-5 md:p-6 pt-0 border-t border-gray-200 hidden">
+                    <p class="text-gray-700">
+                        O `python-dotenv` é uma <strong>"Chave de Leitura de Cofres"</strong>. Ele é fundamental para a segurança e portabilidade de configurações.
+                    </p>
+                    <p class="mt-3 text-gray-700">
+                        <strong>1. Para que Serve?</strong> Ele lê as variáveis de configuração (chaves, senhas, URLs) que estão armazenadas de forma segura no seu arquivo `.env` e as injeta no ambiente do seu projeto. Assim, você nunca hardcode informações sensíveis.
+                    </p>
+                    <p class="mt-3 text-gray-700">
+                        <strong>2. Como Instalar?</strong> Basta executar no seu terminal (com a venv ativa!):
+                        <code class="block bg-sind-dark text-white p-3 my-2 rounded font-mono overflow-x-auto">pip install python-dotenv</code>
+                    </p>
+                    <p class="mt-3 text-gray-700">
+                        Com isso, você mantém suas credenciais privadas, seguindo as melhores práticas de desenvolvimento.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Pergunta 8: Para que serve uma venv? -->
+            <div class="faq-item bg-white shadow-xl rounded-xl overflow-hidden transition-all duration-300" data-id="q8">
+                <button onclick="toggleAnswer('q8')" class="w-full text-left p-5 md:p-6 text-xl font-semibold text-sind-primary hover:bg-gray-100 focus:outline-none transition-colors duration-200">
+                    <div class="faq-header-content">
+                        <span>8. Para que serve uma <code class="font-mono">venv</code> (ambiente virtual)?</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                </button>
+                <div id="q8-answer" class="faq-answer p-5 md:p-6 pt-0 border-t border-gray-200 hidden">
+                    <p class="text-gray-700">
+                        Uma `venv` é o <strong>"Laboratório Isolado"</strong> do seu projeto Python.
+                    </p>
+                    <p class="mt-3 text-gray-700">
+                        <strong>O Problema:</strong> Se você tem o Projeto A que precisa do Django 3.2 e o Projeto B que precisa do Django 4.0, sem uma `venv`, eles entrariam em conflito (o temido "Inferno de Dependências").
+                    </p>
+                    <p class="mt-3 text-gray-700">
+                        <strong>A Solução:</strong> A `venv` cria um diretório isolado que armazena as cópias exatas do Python e dos pacotes **apenas** para aquele projeto. Assim, o ambiente do Projeto A não interfere no Projeto B.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Pergunta 9: Como instalar uma venv? -->
+            <div class="faq-item bg-white shadow-xl rounded-xl overflow-hidden transition-all duration-300" data-id="q9">
+                <button onclick="toggleAnswer('q9')" class="w-full text-left p-5 md:p-6 text-xl font-semibold text-sind-primary hover:bg-gray-100 focus:outline-none transition-colors duration-200">
+                    <div class="faq-header-content">
+                        <span>9. Qual é o comando padrão para instalar ou criar uma <code class="font-mono">venv</code>?</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                </button>
+                <div id="q9-answer" class="faq-answer p-5 md:p-6 pt-0 border-t border-gray-200 hidden">
+                    <p class="text-gray-700">
+                        O processo é simples e utiliza o módulo embutido do Python.
+                    </p>
+                    <p class="mt-3 text-700">
+                        No diretório raiz do seu projeto, execute o **"Comando de Criação do Laboratório"**:
+                        <code class="block bg-sind-dark text-white p-3 my-2 rounded font-mono overflow-x-auto">python3 -m venv nome_da_venv</code>
+                    </p>
+                    <p class="mt-3 text-gray-700">
+                        Geralmente, o nome padrão dado ao ambiente virtual é apenas <code class="bg-gray-200 p-1 rounded font-mono">venv</code> ou <code class="bg-gray-200 p-1 rounded font-mono">.venv</code>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Pergunta 10: Como ativar uma venv? -->
+            <div class="faq-item bg-white shadow-xl rounded-xl overflow-hidden transition-all duration-300" data-id="q10">
+                <button onclick="toggleAnswer('q10')" class="w-full text-left p-5 md:p-6 text-xl font-semibold text-sind-primary hover:bg-gray-100 focus:outline-none transition-colors duration-200">
+                    <div class="faq-header-content">
+                        <span>10. Como eu ativo (ligo) o meu ambiente virtual (<code class="font-mono">venv</code>)?</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                </button>
+                <div id="q10-answer" class="faq-answer p-5 md:p-6 pt-0 border-t border-gray-200 hidden">
+                    <p class="text-gray-700">
+                        Ativar a `venv` é o mesmo que **"Entrar no Laboratório"**. O comando depende do seu sistema operacional:
+                    </p>
+                    <div class="bg-blue-50 p-4 rounded-lg mt-3">
+                        <p class="font-bold text-sind-primary">No Linux ou macOS (Bash/Zsh):</p>
+                        <code class="block bg-gray-200 p-2 my-1 rounded font-mono overflow-x-auto">source venv/bin/activate</code>
+                    </div>
+                    <div class="bg-red-50 p-4 rounded-lg mt-3">
+                        <p class="font-bold text-sind-primary">No Windows (CMD):</p>
+                        <code class="block bg-gray-200 p-2 my-1 rounded font-mono overflow-x-auto">venv\Scripts\activate</code>
+                    </div>
+                    <p class="mt-3 text-gray-700">
+                        Você saberá que deu certo quando o nome da sua `venv` (<code class="bg-gray-200 p-1 rounded font-mono">(venv)</code>) aparecer no início da linha de comando do seu terminal.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Pergunta 11: Como gerar um requirements.txt? -->
+            <div class="faq-item bg-white shadow-xl rounded-xl overflow-hidden transition-all duration-300" data-id="q11">
+                <button onclick="toggleAnswer('q11')" class="w-full text-left p-5 md:p-6 text-xl font-semibold text-sind-primary hover:bg-gray-100 focus:outline-none transition-colors duration-200">
+                    <div class="faq-header-content">
+                        <span>11. Como gero o arquivo <code class="font-mono">requirements.txt</code>?</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                </button>
+                <div id="q11-answer" class="faq-answer p-5 md:p-6 pt-0 border-t border-gray-200 hidden">
+                    <p class="text-gray-700">
+                        O `requirements.txt` é a <strong>"Receita Secreta"</strong> do seu projeto, listando todos os ingredientes (pacotes) e suas versões exatas.
+                    </p>
+                    <p class="mt-3 text-gray-700">
+                        Com sua `venv` ativa, execute o **"Comando da Receita"** no terminal:
+                        <code class="block bg-sind-dark text-white p-3 my-2 rounded font-mono overflow-x-auto">pip freeze > requirements.txt</code>
+                    </p>
+                    <p class="mt-3 text-gray-700">
+                        Este comando congela (`freeze`) a lista de pacotes instalados e redireciona (`>`) essa saída para o arquivo `requirements.txt` na raiz do projeto.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Pergunta 12: Como instalar um requirements.txt? -->
+            <div class="faq-item bg-white shadow-xl rounded-xl overflow-hidden transition-all duration-300" data-id="q12">
+                <button onclick="toggleAnswer('q12')" class="w-full text-left p-5 md:p-6 text-xl font-semibold text-sind-primary hover:bg-gray-100 focus:outline-none transition-colors duration-200">
+                    <div class="faq-header-content">
+                        <span>12. Como eu instalo todos os pacotes listados em um <code class="font-mono">requirements.txt</code>?</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                </button>
+                <div id="q12-answer" class="faq-answer p-5 md:p-6 pt-0 border-t border-gray-200 hidden">
+                    <p class="text-gray-700">
+                        Seu colega de trabalho acabou de te enviar o código. Para "montar" o projeto na sua máquina, siga os passos (após criar e ativar sua `venv`!):
+                    </p>
+                    <p class="mt-3 text-gray-700">
+                        Execute o **"Comando de Montagem"** na pasta raiz do projeto:
+                        <code class="block bg-sind-dark text-white p-3 my-2 rounded font-mono overflow-x-auto">pip install -r requirements.txt</code>
+                    </p>
+                    <p class="mt-3 text-gray-700">
+                        O flag `-r` instrui o `pip` a ler e instalar todos os requisitos listados no arquivo. Isso garante que você tenha as mesmas dependências que o projeto original.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-sind-dark text-white text-center p-6 mt-10">
+        <p class="text-sm">Sindcode &copy; 2025 - Sindicato dos Programadores Python de Brasília. Pelo fortalecimento da nossa categoria.</p>
+    </footer>
+
+    <script>
+        // JavaScript para o Acordeão (FAQ)
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id + '-answer');
+            const button = document.querySelector(`.faq-item[data-id="${id}"] button`);
+            const icon = button.querySelector('svg');
+            const item = document.querySelector(`.faq-item[data-id="${id}"]`);
+
+            // Fecha todos os outros
+            document.querySelectorAll('.faq-answer').forEach(el => {
+                if (el.id !== id + '-answer' && !el.classList.contains('hidden')) {
+                    el.classList.add('hidden');
+                    // Gira a seta de volta
+                    document.querySelector(`[data-id="${el.id.replace('-answer', '')}"] button svg`).classList.remove('rotate-180');
+                    document.querySelector(`.faq-item[data-id="${el.id.replace('-answer', '')}"]`).classList.remove('ring-2', 'ring-sind-secondary');
+                }
+            });
+
+            // Abre ou fecha o item clicado
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+                item.classList.add('ring-2', 'ring-sind-secondary');
+            } else {
+                answer.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+                item.classList.remove('ring-2', 'ring-sind-secondary');
+            }
+        }
+    </script>
+</body>
+</html>
