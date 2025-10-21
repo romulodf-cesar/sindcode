@@ -1,3 +1,9 @@
+CREATE database sindcode_v2;
+
+
+use sindcode_v2;
+
+
 CREATE TABLE IF NOT EXISTS associado(
 	id_associado INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     cpf VARCHAR(20) NOT NULL,
