@@ -1,0 +1,18 @@
+/*
+   estilizar uma tag
+   estilizar uma classe
+   estilizar um identificador
+
+ */
+body{
+    background-color:black;
+}
+.para_azul{
+   color: blue;
+}
+#topo{
+    background-color: green;
+    width: 1852px;
+    height: 160px;
+    border:2px solid red;
+}
