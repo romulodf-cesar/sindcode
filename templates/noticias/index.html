@@ -1,26 +1,8 @@
-
-<!DOCTYPE html>
-{% load static %}
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>SindCode</title>
-    <!-- Introdução ao DTL (Django Template Language)  -->
-    <link rel="stylesheet" href="{% static '/styles/style.css'%}">
-</head>
-<body>
+{% extends 'noticias/base.html' %}  <!--DTL - Django Template Language -->
+{% load static  %}  <!--DTL - Django Template Language -->
+{% block content %}
       <div id="site">
-          <header id="topo">
-               <div id="midias_busca">
-                     aqui são as midias e a busca
-               </div>
-               <div id="logo_menu">
-                      <img src="{% static '/assets/logo/logo_sind.png' %}" alt="logo do sindcode" style="width:10%;">
-                      <ul>
-                          <li><a href="{% url 'index' %}">filie-se</a></li>
-                      </ul>
-               </div>
-          </header>
+
           <main id="area">
              <div id="slide_show">
                  aqui é o slide show
@@ -41,9 +23,6 @@
                   aqui é a tv sindcode
               </div>
           </main>
-          <footer id="rodape">
-             aqui é o rodapé
-          </footer>
+
       </div>
-</body>
-</html>
+ {% endblock %}

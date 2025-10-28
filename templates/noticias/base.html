@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>SindCode</title>
+    <!-- Introdução ao DTL (Django Template Language)  -->
+    <link rel="stylesheet" href="{% static '/styles/style.css'%}">
+</head>
+<body>
+    {% include 'noticias/partials/_header.html'%}
+    {% block content %}{% endblock %}
+    {% include 'noticias/partials/_footer.html'%}
+</body>
+</html>
