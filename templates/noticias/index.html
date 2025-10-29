@@ -1,28 +1,44 @@
 {% extends 'noticias/base.html' %}  <!--DTL - Django Template Language -->
 {% load static  %}  <!--DTL - Django Template Language -->
 {% block content %}
-      <div id="site">
+<div id="site">
 
-          <main id="area">
-             <div id="slide_show">
-                 aqui é o slide show
-             </div>
-             <div id="noticias">
-                 aqui são as noticias
-             </div>
-             <div id="juridico">
-                 aqui é o juridico
-             </div>
-             <div id="beneficios">
-                 aqui são os beneficios
-             </div>
-              <div id="nota_pesar">
-                  aqui são as notas de pesar
-              </div>
-              <div id="tv_sindcode">
-                  aqui é a tv sindcode
-              </div>
-          </main>
+    <main id="area">
+        <div id="slide_show">
+            aqui é o slide show
+        </div>
+        <div id="noticias">
+          {% for noticia_id, info in cards.items %}
+            <!-- inicio da primeira noticia -->
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{% static 'assets/noticias/foto_noticia_01.jpeg' %}" class="img-fluid rounded-start" alt="mulheres do sindicato com roupas coloridas e sorridentes">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ info.titulo  }}</h5>
+                            <p class="card-text">{{ info.conteudo  }}</p>
+                            <p class="card-text"><small class="text-body-secondary">{{info.data_publicacao}}</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- fim da primeira noticia -->
+          {% endfor %}
+        </div>
+        <div id="juridico">
+            aqui é o juridico
+        </div>
+        <div id="beneficios">
+            aqui são os beneficios
+        </div>
+        <div id="nota_pesar">
+            aqui são as notas de pesar
+        </div>
+        <div id="tv_sindcode">
+            aqui é a tv sindcode
+        </div>
+    </main>
 
-      </div>
- {% endblock %}
+</div>
+{% endblock %}

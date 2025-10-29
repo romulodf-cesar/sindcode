@@ -6,4 +6,19 @@ from django.http import HttpResponse
 # se def fora classe = função
 def index(request):
     #return HttpResponse("<h1>Alô Django 2025</h1>")
-    return render(request, 'noticias/index.html')
+
+    # definindo um mock com dict
+    dados ={
+       1:{"titulo":"mulheres dev",
+          "conteudo":"mulheres programadores em python",
+          "data_publicacao":"29/10/2025"},
+       2:{"titulo":"programadores kids",
+          "conteudo":"programadores em python no dia das crianças",
+          "data_publicacao":"12/10/2025"},
+        3: {"titulo": "Josias novo presidente",
+            "conteudo": "Josias é nosso novo presidente, um homem de grande sonhos",
+            "data_publicacao": "12/10/2025"},
+    }
+    return render(request,
+                  'noticias/index.html',
+                  {'cards':dados})
