@@ -58,5 +58,79 @@ A UC visa aplicar metodologias ágeis e tecnologias modernas para a criação de
 
 #### ** Aula 4: DRY (Don't Repeat Yourself) - Não seja repetitivo"
 
-index - noticias (principal)
-index - associados
+- index - noticias (principal)
+- index - associados
+- extends
+- include
+- partials
+
+#### ** Aula 5: Conclusão"
+
+- Um projeto Django é formado por um ou vários aplicativos
+- O Django nasceu para gerenciar conteúdo (indicado para portais e notícias)
+- O Django é usando por grandes empresas (Netflix, Spotify, Instagram)
+- O Django é seguro , pyhton, simples, prático, rápido
+- O Django é integrado (Admin,Segurança,Templates)
+- O Django é dívidido em camadas
+  - MVT (Model, View, Template)
+- Model é o modelo da aplicação
+- View é o controlador (requisições [request-response (HTTP)])
+- Template é a parte visual do sistema (HTML,CSS,ASSETS, STYLES,JS,BOOTSTRAP)
+- https://tailwindcss.com/ pode ser utilizado em uma camada junto com DTL
+- DTL (Django Template Language) - {%        %}
+- Aprendemos a configurar URLs e executar aplicação com servidor local
+- Aprendemos sobre HTML e suas principais TAGS
+- Aprendemos um pouco sobre cores e psicologia das cores e identidade visual
+- Aprendemos sobre div e sobre o uso de HTML header, main e footer
+- Aprendemos um pouco sobre fórmularios HTML
+- Aprendemos a gerar um layout com Gemini Canvas
+- Referência Layout: https://gemini.google.com/share/907d04b81dd0
+
+
+
+#### ** Módulo 2 -  Django ORM e ADMIN"
+
+##### ** Trabalhar com Dados
+- Apresentação
+- Preparar o ambiente
+- Nomes Dinâmicos
+- Banco de Dados
+- ORM no Django
+- Criar dados
+- Models no Django
+- Migrations
+
+##### ** Admin
+- Acessar o banco
+- Passar referência
+- CRUD no Admin
+- Incluir Categoria na Noticia (1:N)
+- Makemigrations e migrate
+
+##### ** Admin Avançado
+
+- Personalizar admin
+- Funcionalidade de publicação
+- Incrementar o index (deixar o site bonito)
+
+##### ** Imagens e Filtros
+
+- Caminho para fotos (Galeria de Fotos)
+- Imagem "not found"
+- Alterar a imagem no template
+
+#### ** Mecanismo de busca
+
+- Funcionalidade de buscar
+- View de buscar
+- Autenticação e Autorização (Django Admin)
+
+#### ** Conclusão 
+
+- Concluir
+- Tirando dúvidas
+- Provinha prática teorica de POO
+- GitHub
+- Linkedin
+- Vercel e Django
+
