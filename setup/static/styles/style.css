@@ -1,39 +1,43 @@
-/*
-   estilizar uma tag
-   estilizar uma classe
-   estilizar um identificador
-
- */
-body{
-    background-color:#2D276A;
-}
-.para_azul{
-   color: blue;
-}
-#topo{
-    background-color: green;
-    width: 1852px;
-    height: 160px;
-    border:2px solid #aaaaaa;
-}
-#midias_busca{
-    background-color: #3F3F3F;
-    width:100%;
-    height: 52px;
-}
-#logo_menu{
-    background-color: #00E3A2;
-    width:100%;
-    height:108px;
-}
-main{
-    width: 100%;
-    height: 1200px;
-    border:2px solid #aaaaaa;
-    background-color: #FF7F00;
+header{
+   background-color:#004080;
+   color:#FFFFFF;
 }
 footer{
-    height: 67px;
-    background-color:#00AEEF; /* azul ciano vibrante*/
-
+   background-color:#004080;
+   color:#FFFFFF;
 }
+
+body{
+     background-color: var(--bs-body-bg);
+     font-family: var(--bs-font-sans-serif);
+}
+
+ /* 2. Adaptação de classes Bootstrap com as cores customizadas */
+.bg-primary { background-color: var(--bs-primary) !important; }
+.text-info { color: var(--bs-info) !important; }
+.btn-info { background-color: var(--bs-info) !important; border-color: var(--bs-info) !important; }
+.btn-info:hover { background-color: #00a4b8 !important; border-color: #00a4b8 !important; }
+
+ /* 3. Estilo para Card de Notícia */
+.news-card {
+     transition: transform 0.2s, box-shadow 0.2s;
+     border-radius: 0.75rem; /* rounded-xl */
+     border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.news-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -5px rgba(0, 64, 128, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.news-card-highlight {
+    border-top: 4px solid var(--bs-info);
+}
+.navbar-brand span {
+     font-size: 0.75rem;
+     font-weight: 300;
+     line-height: 1;
+     display: block;
+     color: rgba(173, 216, 230, 0.9);
+}
+
+
+

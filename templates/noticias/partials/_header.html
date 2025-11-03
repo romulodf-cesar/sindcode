@@ -1,12 +1,30 @@
 {% load static %}
-<header id="topo">
-    <div id="midias_busca">
-        aqui são as midias e a busca
-    </div>
-    <div id="logo_menu">
-        <img src="{% static '/assets/logo/logo_sind.png' %}" alt="logo do sindcode" style="width:10%;">
-        <ul>
-            <li><a href="{% url 'index' %}">filie-se</a></li>
-        </ul>
-    </div>
+
+<!-- 1. Header/Navegação Principal (Azul Escuro) -->
+<header class=" shadow-lg sticky-top z-1">
+    <div class="container-fluid container-lg">
+        <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                <a class="navbar-brand py-3 me-5" href="#">
+                    <span class="fs-3 fw-bolder">SINDCODE</span>
+                    <span class="fw-light">A Voz dos Djangueiros de Brasília</span>
+                </a>
+
+                <!-- Botão de colapso para mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menu de Navegação -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link text-white-50" href="#">Institucional</a></li>
+                        <li class="nav-item"><a class="nav-link text-white-50" href="#">Notícias</a></li>
+                        <li class="nav-item"><a class="nav-link text-white-50" href="#">Publicações</a></li>
+                        <li class="nav-item"><a class="nav-link text-white-50" href="#">Fale Conosco</a></li>
+                    </ul>
+                    <!-- Botão de Acesso - Cor de Destaque -->
+                    <a href="#" class="btn btn-info text-white fw-bold rounded-pill shadow-sm py-2 px-4">Área do Associado</a>
+                </div>
+            </nav>
+        </div>
 </header>
