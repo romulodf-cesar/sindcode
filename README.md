@@ -64,7 +64,7 @@ A UC visa aplicar metodologias ágeis e tecnologias modernas para a criação de
 - include
 - partials
 
-#### ** Aula 5: Conclusão"
+#### ** Aula 5: Aplicando Estilos"
 
 - Um projeto Django é formado por um ou vários aplicativos
 - O Django nasceu para gerenciar conteúdo (indicado para portais e notícias)
@@ -85,22 +85,22 @@ A UC visa aplicar metodologias ágeis e tecnologias modernas para a criação de
 - Aprendemos um pouco sobre fórmularios HTML
 - Aprendemos a gerar um layout com Gemini Canvas
 - Referência Layout: https://gemini.google.com/share/907d04b81dd0
-
+- GitHub do projeto: https://github.com/romulodf-cesar/sindcode
 
 
 #### ** Módulo 2 -  Django ORM e ADMIN"
 
-##### ** Trabalhar com Dados
-- Apresentação
-- Preparar o ambiente
-- Nomes Dinâmicos
-- Banco de Dados
-- ORM no Django
-- Criar dados
-- Models no Django
-- Migrations
+##### ** Aula 6 -  Trabalhar com Dados
+- Apresentação -ok
+- Preparar o ambiente -ok 
+- Nomes Dinâmicos -ok
+- Banco de Dados - ok
+- ORM no Django -ok
+- Criar dados - ok 
+- Models no Django - ok
+- Migrations - ok
 
-##### ** Admin
+##### ** Aula 7 -  Admin
 - Acessar o banco
 - Passar referência
 - CRUD no Admin
