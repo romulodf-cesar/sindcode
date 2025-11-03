@@ -34,7 +34,8 @@
                 </div>
 
                 <!-- Lista de Notícias Secundárias -->
-
+              {% if cards %}
+              {% for categorias in cards %}
                 <div class="d-grid gap-3">
                     <!-- Notícia 1 -->
                     <div class="d-flex bg-white p-3 news-card shadow-sm border-start border-white border-4 hover-border-info">
@@ -52,22 +53,9 @@
                         </div>
                     </div>
 
-                    <!-- Notícia 2 -->
-                    <div class="d-flex bg-white p-3 news-card shadow-sm border-start border-white border-4 hover-border-info">
-                        <img src="https://placehold.co/150x100/f0f0f0/333333?text=Foto" alt="Miniatura da notícia" class="d-none d-sm-block rounded-2 me-4" style="width: 100px; height: 80px; object-fit: cover;">
-                        <div class="flex-grow-1">
-                            <div class="small text-muted mb-1">FORMAÇÃO | 22/10/2025</div>
-                            <h4 class="fs-5 fw-bold mb-1">
-                                <a href="#" class="text-dark text-decoration-none hover-info">
-                                    SINDAF oferece curso de qualificação em parceria com o SENAI DN.
-                                </a>
-                            </h4>
-                            <p class="small text-secondary d-none d-md-block">
-                                Confira as vagas e como se inscrever para as novas turmas.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+              {% endfor %}
+              {% endif  %}
+            </div>
 
                 <!-- Botão Ver Mais Notícias -->
                 <div class="text-center pt-4">
