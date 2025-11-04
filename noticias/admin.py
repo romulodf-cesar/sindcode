@@ -1,4 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
-# explicar
+from noticias.models import Categoria
+
+admin.site.register(Categoria)
