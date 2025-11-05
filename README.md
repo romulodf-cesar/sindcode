@@ -108,11 +108,17 @@ A UC visa aplicar metodologias ágeis e tecnologias modernas para a criação de
 - Migrations - ok
 
 ##### ** Aula 7 -  Admin
-- Acessar o banco
-- Passar referência
-- CRUD no Admin
-- Incluir Categoria na Noticia (1:N)
-- Makemigrations e migrate
+- Acessar o banco - ok
+- Passar referência - ok
+- CRUD no Admin - ok
+- Incluir Categoria - ok
+- Makemigrations e migrate - ok
+
+Exercício: considerando que você já sabe incluir uma categoria, considere o modelo MER
+do nosso banco de dados e implemente VOCÊ SOZINHO a entidade Autor.
+
+Considerando nosso contexto a tabela Autor deverá nessa versão ter três campos
+id, nome, perfil.
 
 ##### ** Admin Avançado
 
@@ -120,9 +126,12 @@ A UC visa aplicar metodologias ágeis e tecnologias modernas para a criação de
 - Funcionalidade de publicação
 - Incrementar o index (deixar o site bonito)
 
+
+
 ##### ** Imagens e Filtros
 
 - Caminho para fotos (Galeria de Fotos)
+  - Noticia
 - Imagem "not found"
 - Alterar a imagem no template
 
