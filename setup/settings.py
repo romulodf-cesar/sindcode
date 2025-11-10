@@ -89,6 +89,10 @@ DATABASES = {
         'HOST': 'localhost',        # Ou o IP/nome do host onde o MySQL está rodando
         'PORT': '3306',             # A porta do MySQL (3306 é a padrão)
         # Outras opções podem ser adicionadas em 'OPTIONS' se necessário
+        # ... outras configurações ...
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        }
     }
 }
 

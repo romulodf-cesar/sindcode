@@ -1,0 +1,55 @@
+{% extends 'noticias/base.html' %} 
+{% load static %}  
+
+{% block content %}
+<div class="container-fluid container-lg py-5">
+    
+    <h2 class="fs-3 fw-bold text-info border-bottom border-primary border-2 pb-2 mb-5">
+        🔥 Notícias em Destaque
+    </h2>
+
+    {% if noticias_destaque %}
+        <div class="d-grid gap-4">
+            
+            {% for noticia in noticias_destaque %}
+            <div class="d-flex bg-white p-4 news-card shadow-lg border-start border-white border-4 hover-border-info">
+                
+                <img src="{% static 'img/default_news.png' %}" alt="Miniatura da notícia" 
+                     class="d-none d-sm-block rounded-2 me-4" 
+                     style="width: 150px; height: 100px; object-fit: cover;">
+                
+                <div class="flex-grow-1">
+                    
+                    <div class="small text-muted mb-1">
+                        <span class="fw-bold text-primary">{{ noticia.categoria.nome }}</span>
+                        <span>•</span>
+                        <span>{{ noticia.data_publicacao|date:"d \d\e F \d\e Y" }}</span>
+                    </div>
+
+                    <h4 class="fs-4 fw-bold mb-2">
+                        <a href="#" class="text-dark text-decoration-none hover-info">
+                            {{ noticia.titulo }}
+                        </a>
+                    </h4>
+                    
+                    <p class="text-secondary mb-3">
+                        {{ noticia.conteudo|truncatechars:150 }}
+                    </p>
+
+                    <div class="small text-muted fst-italic">
+                        Por: 
+                        <span class="fw-semibold text-dark">{{ noticia.autor.nome }}</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    {% else %}
+        <div class="alert alert-warning text-center" role="alert">
+            Nenhuma notícia marcada como destaque ('5') foi encontrada.
+        </div>
+    {% endif %}
+
+</div>
+{% endblock %}

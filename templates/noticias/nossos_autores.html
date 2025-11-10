@@ -1,0 +1,46 @@
+{% extends 'noticias/base.html' %}  <!--DTL - Django Template Language -->
+{% load static  %}  <!--DTL - Django Template Language -->
+{% block content %}
+
+<div id="app" class="d-flex flex-column min-vh-100">
+    <main>
+            <h5 class="mb-4 text-primary">Nossos Autores</h5>
+
+            {% if autores %}
+
+            <div class="table-responsive">
+                <table class="table table-striped table-hover table-bordered">
+
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome do Autor</th>
+                            <th scope="col">Perfil/Biografia</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {% for autor in autores %}
+                        <tr>
+                            <th scope="row">{{ forloop.counter }}</th>
+                            <td>
+                                <strong>{{ autor.nome }}</strong>
+                            </td>
+                            <td>{{ autor.perfil|default:"Nenhum perfil cadastrado."|truncatechars:150 }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            {% else %}
+
+            <div class="alert alert-warning" role="alert">
+                <h4 class="alert-heading">Sem Autores!</h4>
+                <p>Não há nenhum autor cadastrado no momento.</p>
+            </div>
+    </main>
+</div>
+    {% endif %}
+
+{% endblock %}
