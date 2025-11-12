@@ -30,7 +30,7 @@ class Noticia(models.Model):
            null=False,
            blank=False
        )
-       foto = models.CharField(max_length=60,null=True,blank=True)
+       foto = models.ImageField(upload_to="fotos/%Y/%m/%d/",blank=False)
        autor = models.ForeignKey(
               Autor,
               on_delete=models.CASCADE,  # Se o Autor for deletado, todas as suas notícias também serão.

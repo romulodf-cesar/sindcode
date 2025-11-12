@@ -8,10 +8,10 @@
         🔥 Notícias em Destaque
     </h2>
 
-    {% if noticias_destaque %}
+    {% if noticias_destaques %}
         <div class="d-grid gap-4">
             
-            {% for noticia in noticias_destaque %}
+            {% for noticia in noticias_destaques %}
             <div class="d-flex bg-white p-4 news-card shadow-lg border-start border-white border-4 hover-border-info">
                 
                 <img src="{% static 'img/default_news.png' %}" alt="Miniatura da notícia" 

@@ -34,27 +34,30 @@
                 </div>
 
                 <!-- Lista de Notícias Secundárias -->
-              {% if cards %}
-              {% for categorias in cards %}
+              {% if noticias %}
+              {% for noticia in noticias %}
                 <div class="d-grid gap-3">
                     <!-- Notícia 1 -->
                     <div class="d-flex bg-white p-3 news-card shadow-sm border-start border-white border-4 hover-border-info">
-                        <img src="https://placehold.co/150x100/f0f0f0/333333?text=Foto" alt="Miniatura da notícia" class="d-none d-sm-block rounded-2 me-4" style="width: 100px; height: 80px; object-fit: cover;">
+                        {% if noticia.foto == "" or noticia.foto == null%}
+                            <img src="{%static '/assets/imagens/noticias/notfound.png'%}" alt="foto não encontrada" class="d-none d-sm-block rounded-2 me-4" style="width: 160px; height: 140px; object-fit: cover;">
+                        {% else %}
+                             <img src="{{noticia.foto.url}}" alt="{{noticia.titulo}}" class="d-none d-sm-block rounded-2 me-4" style="width: 160px; height: 140px; object-fit: cover;">
+                        {% endif %}
                         <div class="flex-grow-1">
-                            <div class="small text-muted mb-1">{{categorias.nome}}</div>
+                            <div class="small text-muted mb-1">{{noticia.categoria.nome}}</div>
                             <h4 class="fs-5 fw-bold mb-1">
                                 <a href="#" class="text-dark text-decoration-none hover-info">
-                                    a noticia é aqui
-                                    a data é aqui
+                                    {{noticia.titulo}}
                                 </a>
                             </h4>
                             <p class="small text-secondary d-none d-md-block">
-                                detalhes da noticia
+                                  {{noticia.conteudo|truncatechars:150}}
+                                  Data da Publicação{{noticia.data_publicacao}}
+                                  Quem é {{noticia.autor.nome}} : {{noticia.autor.perfil}}
                             </p>
                         </div>
                     </div>
-
-
             </div>
             {% endfor %}
             {% endif  %}
