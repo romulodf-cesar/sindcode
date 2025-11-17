@@ -14,6 +14,12 @@ def index(request):
     noticias = Noticia.objects.all()
     return render(request,'noticias/index.html',{'noticias':noticias})
 
+def buscar(request):
+    noticias = Noticia.objects.order_by("data_publicacao").filter("destaque" == 5)
+    # terminar a amanhã
+    # trazer a pesquisa
+    # aplicar a pesquisa no site.
+    return render(request,'noticias/buscar.html')
 
 
 """
