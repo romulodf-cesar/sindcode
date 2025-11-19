@@ -1,6 +1,6 @@
 from django.urls import path
-from associados.views import index
+from associados.views import associados
 urlpatterns = [
-    path('index',index, name='index'),
+    path('associados',associados, name='associados'),
 
 ]

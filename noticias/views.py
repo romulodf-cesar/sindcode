@@ -10,7 +10,7 @@ def autores(request):
     autores = Autor.objects.all()
     return render(request,'noticias/nossos_autores.html',{'autores':autores})
 
-def index(request):
+def noticias(request):
     noticias = Noticia.objects.all()
     return render(request,'noticias/index.html',{'noticias':noticias})
 
