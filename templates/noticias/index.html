@@ -47,7 +47,7 @@
                         <div class="flex-grow-1">
                             <div class="small text-muted mb-1">{{noticia.categoria.nome}}</div>
                             <h4 class="fs-5 fw-bold mb-1">
-                                <a href="#" class="text-dark text-decoration-none hover-info">
+                                <a href="{% url 'detalhe_noticia' noticia.id %}" class="text-dark text-decoration-none hover-info">
                                     {{noticia.titulo}}
                                 </a>
                             </h4>

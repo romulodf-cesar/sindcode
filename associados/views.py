@@ -1,4 +1,4 @@
 from django.shortcuts import render
 
-def index(request):
+def associados(request):
     return render(request, 'associados/index.html')

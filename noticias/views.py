@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from noticias.models import Categoria, Autor,Noticia
 
 def categorias(request):
@@ -22,7 +22,14 @@ def buscar(request):
             noticias = noticias.filter(conteudo__icontains=nome_buscar)
     return render(request,'noticias/buscar.html',{'noticias':noticias})
 
-
+def detalhe_noticia(request, noticia_id):
+    noticia_principal = get_object_or_404(Noticia, pk=noticia_id)
+    ultimas_noticias = Noticia.objects.exclude(pk=noticia_id).order_by('-data_publicacao')[:4]
+    contexto = {
+        'noticia': noticia_principal,
+        'ultimas_noticias': ultimas_noticias
+    }
+    return render(request, 'noticias/detalhe_noticia.html', contexto)
 """
 def noticias_em_destaque(request):
     # 1. Consulta: Filtra notícias onde 'destaque' é igual a '5'
@@ -35,8 +42,8 @@ def noticias_em_destaque(request):
         {'noticias_destaques': noticias}  # Passa as notícias para o template
     )
 
-
 """
+
 
 # função
 # se def dentro classe = metodo

@@ -1,0 +1,73 @@
+{% extends 'noticias/base.html' %} 
+{% load static %}
+{% block content %}
+<div class="container py-5">
+    <div class="row g-5">
+
+        <div class="col-lg-8">
+            <article>
+                <h1 class="fs-1 fw-bold text-primary mb-4">{{ noticia.titulo }}</h1>
+                <div class="small text-muted mb-4">
+                    <span>{{ noticia.categoria.nome }}</span>
+                    <span>•</span>
+                    <span>{{ noticia.data_publicacao|date:"d de F de Y" }}</span>
+                </div>
+
+                {% if noticia.foto %}
+                <img src="{{ noticia.foto.url }}" alt="{{ noticia.titulo }}" class="img-fluid rounded-3 mb-5"
+                     style="object-fit: cover; max-height: 400px; width: 100%;">
+                {% endif %}
+
+                <div class="lead text-secondary mb-5">
+                    {{ noticia.conteudo|linebreaks }}
+                </div>
+
+                <p class="small text-end fst-italic text-dark">Autor: **{{ noticia.autor.nome }}**</p>
+                <p class="small text-end fst-italic text-dark">Perfil: *{{ noticia.autor.perfil }}*</p>
+
+                <a href="{% url 'index' %}" class="btn btn-outline-info mt-4">
+                    ← Voltar para Notícias
+                </a>
+            </article>
+        </div>
+
+        <div class="col-lg-4">
+            <aside class="p-4 bg-light rounded-3 shadow-sm border-start border-4 border-info">
+                <h3 class="fs-5 fw-bold mb-4 border-bottom pb-2 text-primary">Últimas Notícias</h3>
+
+                {% if ultimas_noticias %}
+                <div class="d-grid gap-3">
+                    {% for item in ultimas_noticias %}
+                    <div class="d-flex align-items-start border-bottom pb-3">
+
+                        {% if item.foto %}
+                            <img src="{{ item.foto.url }}" alt="{{ item.titulo }}"
+                                 class="rounded-2 me-3 flex-shrink-0"
+                                 style="width: 70px; height: 70px; object-fit: cover;">
+                        {% else %}
+                            <img src="{%static '/assets/imagens/noticias/notfound.jpg'%}"
+                                 class="rounded-2 me-3 flex-shrink-0"
+                                 style="width: 70px; height: 70px; object-fit: cover;">
+                        {% endif %}
+
+                        <div class="flex-grow-1">
+                            <div class="small text-muted mb-1 fw-bold text-info text-uppercase">{{ item.categoria.nome }}</div>
+
+                            <h4 class="fs-6 fw-bold mb-0 lh-sm">
+                                <a href="{% url 'detalhe_noticia' item.id %}" class="text-dark text-decoration-none hover-info">
+                                    {{ item.titulo|truncatechars:45 }}
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <p class="small text-secondary">Não há outras notícias recentes no momento.</p>
+                {% endif %}
+            </aside>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
