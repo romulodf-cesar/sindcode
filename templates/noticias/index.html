@@ -12,27 +12,33 @@
                 <h2 class="fs-3 fw-bold text-primary border-bottom border-info border-2 pb-2 mb-4">Últimas Notícias e Informes</h2>
 
                 <!-- Card de Destaque -->
-                <div class="card p-4 shadow-lg mb-4 news-card news-card-highlight">
-                    <img src="https://placehold.co/800x400/004080/FFFFFF?text=Imagem+Destaque+da+Notícia" alt="Imagem em destaque para a notícia principal" class="img-fluid rounded-3 mb-4" style="object-fit: cover; height: 250px;">
-                    <div class="small text-muted mb-2">
-                        <span class="fw-bold text-info">DESTAQUE</span>
-                        <span>•</span>
-                        <span>25 de Outubro de 2025</span>
-                    </div>
-                    <h3 class="fs-3 fw-bolder mb-3 lh-sm">
-                        <a href="#" class="text-primary text-decoration-none hover-info">
-                            Grande mobilização para usar o Django como plataforma oficial dos Pythonianos.
+                <!-- Lista Destaque -->
+                {% if noticias %}
+                {% for noticia in noticias %}
+                    {% if noticia.destaque == 0 %}
+                    <div class="card p-4 shadow-lg mb-4 news-card news-card-highlight">
+                        <img src="https://placehold.co/800x400/004080/FFFFFF?text=Imagem+Destaque+da+Notícia" alt="Imagem em destaque para a notícia principal" class="img-fluid rounded-3 mb-4" style="object-fit: cover; height: 250px;">
+                        <div class="small text-muted mb-2">
+                            <span class="fw-bold text-info">DESTAQUE</span>
+                            <span>•</span>
+                            <span>25 de Outubro de 2025</span>
+                        </div>
+                        <h3 class="fs-3 fw-bolder mb-3 lh-sm">
+                            <a href="#" class="text-primary text-decoration-none hover-info">
+                                Grande mobilização para usar o Django como plataforma oficial dos Pythonianos.
+                            </a>
+                        </h3>
+                        <p class="text-secondary mb-4">
+                            Após intensas negociações com Java, PHP e C#, o SINDCODE anuncia a aprovação de medidas cruciais na Convenção Coletiva de Trabalho apenas com os Djangueiros de Brasília. Leia o informe completo.
+                        </p>
+                        <a href="#" class="text-info fw-bold text-decoration-none d-flex align-items-center">
+                            Continuar lendo
+                            <svg class="ms-1" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </a>
-                    </h3>
-                    <p class="text-secondary mb-4">
-                        Após intensas negociações com Java, PHP e C#, o SINDCODE anuncia a aprovação de medidas cruciais na Convenção Coletiva de Trabalho apenas com os Djangueiros de Brasília. Leia o informe completo.
-                    </p>
-                    <a href="#" class="text-info fw-bold text-decoration-none d-flex align-items-center">
-                        Continuar lendo
-                        <svg class="ms-1" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                    </a>
-                </div>
-
+                    </div>
+                   {% endif %}
+              {% endfor %}
+              {% endif  %}
                 <!-- Lista de Notícias Secundárias -->
               {% if noticias %}
               {% for noticia in noticias %}
