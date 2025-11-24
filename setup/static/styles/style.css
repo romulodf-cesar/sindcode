@@ -39,25 +39,96 @@ body{
      color: rgba(173, 216, 230, 0.9);
 }
 
-.busca{
-    margin-right:45px;
-    float:right;
-   /* distância
-      direita = right
-      esquerda = left
-      em cima = top
-      embaixo = bottom
+/* CONTAINER PRINCIPAL: Organiza a label e o campo de busca */
+.busca-container {
+    /* Mantém o espaçamento externo (ajuste este valor se precisar) */
+    margin-right: 45px;
 
-      margin - distância externa
-      padding - distância interna
-   */
+    /* Define o layout principal para alinhamento horizontal */
+    display: flex;
+    align-items: center; /* Alinha verticalmente ao centro */
+    /* Esta linha confirma que o alinhamento é na horizontal (padrão) */
+    flex-direction: row;
+    padding: 8px 0;
 
+    /* FUNDO: Tornamos transparente para herdar o fundo da página */
+    background-color: transparent;
 
+    /* COR DO TEXTO: Defina uma cor que contraste com o fundo da sua página. */
+    color: #FFFFFF; /* Usado preto escuro, ajuste para branco (#fff) se o fundo for escuro */
 }
-.busca_icone{
 
-    margin-right:10px;
+/* ESTILO DA LABEL "Procurar no site" */
+.busca-label {
+    margin-right: 15px;
+    font-size: 16px;
+    font-weight: 500;
+
+    /* COR: Usamos uma cor mais clara ou mais escura para melhor contraste */
+    color: inherit; /* Usa a cor definida no .busca-container (neste caso, #333) */
 }
 
+/* CAMPO DE INPUT E ÍCONE */
+.busca-campo {
+    /* Layout para alinhar o input e a lupa */
+    display: flex;
+    align-items: center;
 
+    /* Configurações visuais da caixa de busca */
+    background-color: #fff; /* Fundo da caixa de busca */
+    border: 1px solid #ccc; /* Adiciona uma borda fina para definição visual */
+    border-radius: 25px; /* Deixei um pouco mais arredondado */
+    padding: 6px 15px; /* Ajuste no padding para mais altura */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* Sombra suave */
+}
 
+/* ESTILO DO CAMPO DE TEXTO (onde o usuário digita) */
+.busca-input {
+    border: none;
+    outline: none; /* Importante para remover o contorno ao focar */
+    flex-grow: 1;
+    font-size: 15px;
+    color: #333;
+    background: transparent;
+    padding-right: 10px;
+}
+
+/* ESTILO DO ÍCONE DA LUPA - AGORA DISCRETA */
+.busca-icone-lupa {
+    line-height: 1;
+    font-size: 18px;
+
+    /* COR DISCRETA: Uso de cinza claro para ser sutil */
+    color: #aaa;
+    cursor: pointer;
+    margin-left: 5px; /* Adicionado um pequeno espaçamento à esquerda */
+    margin-right: 0; /* Removido o ajuste negativo de margem */
+    transition: color 0.2s; /* Adiciona transição para o efeito hover */
+}
+
+/* Efeito ao passar o mouse na lupa para feedback visual */
+.busca-icone-lupa:hover {
+    color: #777; /* Escurece um pouco ao passar o mouse */
+}
+
+/* No seu arquivo .css */
+.busca-icone-lupa-btn {
+    /* Remove a aparência padrão de botão */
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+
+    /* Configura o ícone */
+    font-size: 1.2em; /* Mantenha o tamanho que você tinha */
+    color: #555; /* Mantenha a cor que você tinha */
+    cursor: pointer; /* Indica que é clicável */
+
+    /* (Opcional) Ajustes de posicionamento, se necessário */
+    /* Ex: Se você usava position: absolute no span, use aqui */
+}
+
+/* (Opcional) Efeito visual ao passar o mouse */
+.busca-icone-lupa-btn:hover {
+    color: #007bff; /* Exemplo: Mudar a cor ao passar o mouse */
+}

@@ -122,31 +122,34 @@ id, nome, perfil.
 
 ##### ** Admin Avançado
 
-- Personalizar admin
-- Funcionalidade de publicação
+- Personalizar admin - pendente (ok) - estudo dirigido.
+- Funcionalidade de publicação - 
+- (0 - destaque principal, 1,2,3,4 (destaque secundário) 5 geral)
 - Incrementar o index (deixar o site bonito)
 
 
 
 ##### ** Imagens e Filtros
 
-- Caminho para fotos (Galeria de Fotos)
-  - Noticia
-- Imagem "not found"
-- Alterar a imagem no template
+- Caminho para fotos (Galeria de Fotos) - ok
+  - Noticia - ok
+- Imagem "not found" - ok
+- Alterar a imagem no template - ok
 
 #### ** Mecanismo de busca
 
-- Funcionalidade de buscar
-- View de buscar
-- Autenticação e Autorização (Django Admin)
+- Funcionalidade de buscar -ok
+- View de buscar - ok
+- Autenticação e Autorização (Django Admin) - pendente
+
 
 #### ** Conclusão 
 
-- Concluir
-- Tirando dúvidas
-- Provinha prática teorica de POO
-- GitHub
-- Linkedin
-- Vercel e Django
+- Concluir - ok
+- Tirando dúvidas - ok
+- Provinha prática teorica de POO - ok
+- Apresentação do Sistema
+- GitHub - pendente
+- Linkedin - pendente
+- Vercel e Django - pendente
 

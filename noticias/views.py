@@ -1,5 +1,6 @@
 from django.shortcuts import render,get_object_or_404
 from noticias.models import Categoria, Autor,Noticia
+from django.db.models import Q
 
 def categorias(request):
     categorias = Categoria.objects.all()
@@ -19,7 +20,18 @@ def buscar(request):
     if "buscar" in request.GET:
         nome_buscar = request.GET['buscar']
         if nome_buscar:
-            noticias = noticias.filter(conteudo__icontains=nome_buscar)
+            # 1. Crie as duas condições de busca
+            condicao_titulo = Q(titulo__icontains=nome_buscar)
+            condicao_conteudo = Q(conteudo__icontains=nome_buscar)
+
+            # 2. Combine as condições usando o operador OU (|)
+            filtro_ou = condicao_titulo | condicao_conteudo
+
+            # 3. Aplique o filtro ao seu QuerySet
+            noticias = Noticia.objects.filter(filtro_ou)
+        else:
+            # Se não houver termo de busca, retorne todas as notícias
+            noticias = Noticia.objects.all()
     return render(request,'noticias/buscar.html',{'noticias':noticias})
 
 def detalhe_noticia(request, noticia_id):

@@ -18,19 +18,23 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link text-white-50" href="#">Institucional</a></li>
-                        <li class="nav-item"><a class="nav-link text-white-50" href="{% url 'index' %}">Notícias</a></li>
+                        <li class="nav-item"><a class="nav-link text-white-50" href="{% url 'index' %} ">Notícias</a></li>
                         <li class="nav-item"><a class="nav-link text-white-50" href="#">Publicações</a></li>
                         <li class="nav-item"><a class="nav-link text-white-50" href="#">Fale Conosco</a></li>
                     </ul>
-                    <form action="{% url 'buscar'%}">
-                         <input type="text" class="busca" name="buscar" placeholder="digite sua busca aqui">
-                         <button type="submit">
-                               <img class="busca_icone" src="#">
-                         </button>
-                    </form>
+
+                   <form action="{% url 'buscar'%}">
+                      <div class="busca-container">
+                         <div class="busca-label">Procurar no site</div>
+                           <div class="busca-campo">
+                                <input type="text" placeholder="Digite aqui" class="busca-input" name="buscar">
+                                 <button type="submit" class="busca-icone-lupa-btn">&#128269;</button>
+                           </div>
+                     </div>
+                   </form>
 
                     <!-- Botão de Acesso - Cor de Destaque -->
-                    <a href="#" class="btn btn-info text-white fw-bold rounded-pill shadow-sm py-2 px-4">Área do Associado</a>
+                   <!-- <a href="#" class="btn btn-info text-white fw-bold rounded-pill shadow-sm py-2 px-4">Área do Associado</a>-->
                 </div>
             </nav>
         </div>
