@@ -42,6 +42,14 @@ def detalhe_noticia(request, noticia_id):
         'ultimas_noticias': ultimas_noticias
     }
     return render(request, 'noticias/detalhe_noticia.html', contexto)
+
+def flipbook_view(request):
+    # Lista simples das páginas (para referência no template)
+    # Na vida real, isso viria de um modelo do Django (e.g., Catálogo.objects.all())
+    context = {
+        'pages_count': 3, # Exemplo: temos 3 páginas (p1.jpg, p2.jpg, p3.jpg)
+    }
+    return render(request, 'flipbook.html', context)
 """
 def noticias_em_destaque(request):
     # 1. Consulta: Filtra notícias onde 'destaque' é igual a '5'
@@ -78,4 +86,6 @@ def noticias_em_destaque(request):
             "data_publicacao": "12/10/2025"},
     }
 """
+
+
 

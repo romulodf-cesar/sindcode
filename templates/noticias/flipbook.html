@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Flipbook Django</title>
+    <link rel="stylesheet" href="{% static 'css/flipbook.css' %}">
+</head>
+<body>
+
+    <div id="flipbook-container">
+        <button id="prev-btn">Anterior</button>
+        <div id="flipbook">
+            {% for i in "x"|ljust:pages_count %}
+            {% with page_num=forloop.counter %}
+                <div class="page" id="p{{ page_num }}" style="z-index: {{ pages_count|add:1|sub:page_num }};">
+                    <img src="{% static 'images/page'|add:page_num|stringformat:'s'|add:'.jpg' %}"
+                         alt="Página {{ page_num }}">
+                </div>
+            {% endwith %}
+            {% endfor %}
+
+        </div>
+        <button id="next-btn">Próximo</button>
+    </div>
+
+    <script src="{% static 'js/flipbook.js' %}"></script>
+</body>
+</html>
