@@ -258,3 +258,4 @@ Este checklist acompanha o progresso de aprendizado e implementação do projeto
 | **Conclusão** | Realização da provinha prática/teórica de POO. | [ ] |
 | **Próximos Passos** | Planejamento de deploy (Vercel e Django) e atualização de perfis (GitHub, LinkedIn). | [ ] |
 
+Gabarito de Referência do Aluno Josias Alves , para pesquisa: https://github.com/zikes18/sindicode-web
