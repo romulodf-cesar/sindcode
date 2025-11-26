@@ -16,7 +16,7 @@ A UC visa aplicar metodologias ágeis e tecnologias modernas para a criação de
 
 ---
 
-### 📚 Diário de Bordo da UC
+### 📚 Aplicativo de Notícias - 140 horas
 
 #### **Aula 1: Introdução à Metodologia e Ambientação**
 
@@ -153,3 +153,6 @@ id, nome, perfil.
 - Linkedin - pendente
 - Vercel e Django - pendente
 
+### 📚 Aplicativo de Associados - 60 horas
+
+#### **Aula 1: Introdução à Metodologia e Ambientação**
