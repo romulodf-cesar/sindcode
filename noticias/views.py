@@ -49,7 +49,7 @@ def flipbook_view(request):
     context = {
         'pages_count': 3, # Exemplo: temos 3 páginas (p1.jpg, p2.jpg, p3.jpg)
     }
-    return render(request, 'flipbook.html', context)
+    return render(request, 'noticias/flipbook.html', context)
 """
 def noticias_em_destaque(request):
     # 1. Consulta: Filtra notícias onde 'destaque' é igual a '5'

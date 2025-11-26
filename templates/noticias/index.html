@@ -45,13 +45,13 @@
                {% endif  %}
                 <!-- Lista de Notícias Secundárias -->
               {% if noticias %}
-              {% for noticia in noticias|slice:"1:5" %}
+              {% for noticia in noticias %}
                 <div class="d-grid gap-3">
                     <!-- Notícia 1 -->
                     <div class="d-flex bg-white p-3 news-card shadow-sm border-start border-white border-4 hover-border-info">
                         {% if noticia.foto == "" or noticia.foto == null%}
                             <img src="{%static '/assets/imagens/noticias/notfound.png'%}" alt="foto não encontrada" class="d-none d-sm-block rounded-2 me-4" style="width: 160px; height: 140px; object-fit: cover;">
-                        {% else %}
+                        {% else if noticia.destaque 1 a 4 ???? %}
                              <img src="{{noticia.foto.url}}" alt="{{noticia.titulo}}" class="d-none d-sm-block rounded-2 me-4" style="width: 160px; height: 140px; object-fit: cover;">
                         {% endif %}
                         <div class="flex-grow-1">
