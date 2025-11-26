@@ -155,4 +155,60 @@ id, nome, perfil.
 
 ### 📚 Aplicativo de Associados - 60 horas
 
-#### **Aula 1: Introdução à Metodologia e Ambientação**
+#### ** Conteúdo Programático
+
+#### ** Aula 1 - App de Associados
+- Apresentação
+- Preparando o ambiente
+- Criando uma nova App
+- URLs e Views
+- Templates
+- Templates de login e cadastro
+- Renderização de página
+
+#### ** Aula 2 - Formulários Django
+- Criando formulário
+- Estilizando formulário
+- Quebra de segurança CSRF
+- Classe Forms do Django
+- Exercícios
+
+#### ** Aula 3 - Autenticação de Associados
+- Associados no Django
+- Lógica de Cadastro
+- Lógica de Login
+- Alertas e Mensagens
+- Logout
+
+#### ** Aula 4 - Validações
+- Refatoração e Validação
+- Associando tabelas
+- Validação clean
+- Mensagem de erro
+
+#### ** Aula 5 - Refatoração
+
+- Partial para alertas
+- Reorganizando diretórios
+- Concluindo o App Associados
+
+#### ** Aula 6 - Autenticação com OAuth 2.0
+- Servidor
+- O Auth 2.0
+- Admin, GitHub e OAuth
+- Apenas para pessoas autenticadas
+- OAuth com GitHub
+
+#### ** Aula 7 - Cloud
+
+- IaaS
+- PaaS
+- SaaS
+- Melhorando o projeto
+- Inserir com nova lógica
+- CRUD
+- Nuvem (Microsoft, Google, AWS)
+- Conexão, Segurança e Gerenciamento de Custo na Nuvem.
+- Serviços de Hospedagem Django / Python
+
+
