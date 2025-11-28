@@ -5,6 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-   Página de Cadastro
+   <form action="{% url 'cadastro' %}" method="POST">
+        {% csrf_token %}
+        {% for field in form.visible_fields %}
+            {{field}}
+        {% endfor %}
+   </form>
 </body>
 </html>
