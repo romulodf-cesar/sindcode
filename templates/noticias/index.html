@@ -90,13 +90,12 @@
                     <p class="text-secondary mb-4 small">
                         Cadastre-se para ter acesso a benefícios exclusivos, assistência jurídica e manter-se informado sobre as lutas nos quadros do Sistema S. Preencha o formulário rápido abaixo.
                     </p>
-                    <form onsubmit="return handleRegistration(event)">
-                        <div class="mb-3">
-                            <input type="text" id="name" placeholder="Seu Nome Completo" required class="form-control form-control-lg rounded-3">
-                        </div>
-                        <div class="mb-4">
-                            <input type="email" id="email" placeholder="Seu melhor E-mail" required class="form-control form-control-lg rounded-3">
-                        </div>
+                    <form action="{% url 'cadastro' %}" method="POST">
+                        {% csrf_token %}
+                        {% for field in form.visible_fields %}
+                             {{field}}
+                        {% endfor %}
+
                         <button type="submit" class="btn btn-info btn-lg w-100 text-white fw-bold rounded-3 shadow-sm">
                             Iniciar Cadastro Completo
                         </button>

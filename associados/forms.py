@@ -1,6 +1,7 @@
 from django import forms
 class AssociadoForm(forms.Form):
     GENERO_CHOICES = (
+        ('', 'Escolha um Genero'),
         ('F', 'Mulher'),
         ('M', 'Homem'),
         ('NB', 'Não Binário'),
