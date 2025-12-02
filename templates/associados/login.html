@@ -7,30 +7,16 @@
     <h2 class="text-primary mb-4">Página de Login</h2>
 
     <div class="card shadow-sm p-4">
-        <form method="POST">
+        <form action="{% url 'login' %}"  method="POST">
             {% csrf_token %}
 
             <div class="row mb-3">
-
-                <div class="mb-3">
-                     <label class="fw-bold">Nome Completo</label>
-                     <input type="text" name="nome_completo" class="form-control" placeholder="Seu nome completo" required>
-                </div>
-
-                <div class="mb-3">
-                     <label class="fw-bold">E-mail</label>
-                     <input type="email" name="email" class="form-control" placeholder="email@example.com" value="{{ email }}" required>
-                 </div>
-
-                <div class="col-md-6">
-                    <label class="fw-bold">CPF</label>
-                    <input type="text" name="cpf" class="form-control" placeholder="XXX.XXX.XXX-XX" required>
-                </div>
-
-                <div class="col-md-6">
-                    <label class="fw-bold">Data de Nascimento</label>
-                    <input type="date" name="data_nascimento" class="form-control" required>
-                </div>
+              {% for field in form.visible_fields %}
+                        <div class="col-12 col-lg-12" style="margin-bottom: 10px;">
+                            <label for="{{ field.id_for_label }}" style="color:#D9D9D9; margin-bottom: 5px;">{{field.label}}</label>
+                            {{ field }}
+                        </div>
+              {% endfor %}
 
             </div>
 

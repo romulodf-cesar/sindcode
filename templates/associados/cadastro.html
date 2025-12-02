@@ -4,58 +4,66 @@
 {% block content %}
 
 <div class="container my-5">
-    <h2 class="text-primary mb-4">Cadastro de Associado</h2>
-
     <div class="card shadow-sm p-4">
-        <form method="POST" action="">
+        <form action="{% url 'cadastro' %}" method="POST">
             {% csrf_token %}
 
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <label class="fw-bold">CPF</label>
-                    <input type="text" name="cpf" class="form-control" placeholder="XXX.XXX.XXX-XX" required>
-                </div>
+             <div class="row">
+                {% for field in form.visible_fields %}
 
-                <div class="col-md-6">
-                    <label class="fw-bold">RG</label>
-                    <input type="text" name="rg" class="form-control" placeholder="Digite seu RG" required>
-                </div>
-            </div>
+                    <div class="col-12 col-lg-12" style="margin-bottom: 10px;"
+                         {% if field.name == 'genero_outro' %}id="div-genero-outro"{% endif %}>
 
-            <div class="mb-3">
-                <label class="fw-bold">E-mail</label>
-                <input type="email" name="email" class="form-control" placeholder="email@example.com" value="{{ email }}" required>
-            </div>
+                        <label for="{{ field.id_for_label }}" style="color:#D9D9D9; margin-bottom: 5px;">{{field.label}}</label>
 
-            <div class="mb-3">
-                <label class="fw-bold">Nome Completo</label>
-                <input type="text" name="nome_completo" class="form-control" placeholder="Seu nome completo" value="{{ nome }}" required>
-            </div>
+                        {{ field }}
 
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <label class="fw-bold">Gênero</label>
-                    <select class="form-select" name="genero" required>
-                        <option value="">Selecione...</option>
-                        <option>Masculino</option>
-                        <option>Feminino</option>
-                        <option>Binário</option>
-                        <option>Outros</option>
-                        <option>Prefiro não responder</option>
-                    </select>
-                </div>
-
-                <div class="col-md-6">
-                    <label class="fw-bold">Data de Nascimento</label>
-                    <input type="date" name="data_nascimento" class="form-control" required>
-                </div>
-            </div>
-
-            <button type="submit" class="btn btn-primary fw-bold mt-2">
-                Cadastrar
-            </button>
+                    </div>
+                {% endfor %}
+             </div>
+            <button class="btn btn-success col-12" style="padding: top 5px;">Cadastrar</button>
         </form>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // ID do campo de seleção de gênero (identidade_genero)
+        const generoSelect = document.getElementById('id_identidade_genero');
+
+        // ID do DIV que envolve o campo 'Outro' (genero_outro)
+        const generoOutroDiv = document.getElementById('div-genero-outro');
+
+        // Se um dos elementos não for encontrado, o script pode parar.
+        if (!generoSelect || !generoOutroDiv) {
+            console.error("ERRO: Elementos do formulário não encontrados. Verifique os IDs no HTML.");
+            return; // Sai da função
+        }
+
+        const VALOR_OUTRO = 'O';
+
+        function toggleOutroField() {
+            // Se o valor selecionado for 'O' (Outro), mostra; caso contrário, esconde.
+            generoOutroDiv.style.display = (generoSelect.value === VALOR_OUTRO) ? 'block' : 'none';
+
+            // Opcional: Limpa o valor do campo 'genero_outro' quando ele é escondido
+            if (generoSelect.value !== VALOR_OUTRO) {
+                 // Assumindo que o campo 'genero_outro' é um input dentro do div.
+                 // Você pode precisar de uma forma mais direta de acessar o input.
+                 // Aqui, tentamos uma abordagem segura, mas pode precisar de ajuste.
+                 const inputOutro = generoOutroDiv.querySelector('input');
+                 if (inputOutro) {
+                    inputOutro.value = '';
+                 }
+            }
+        }
+
+        // Executa na carga da página
+        toggleOutroField();
+
+        // Adiciona um evento para monitorar a mudança no dropdown
+        generoSelect.addEventListener('change', toggleOutroField);
+    });
+</script>
 
 {% endblock %}
