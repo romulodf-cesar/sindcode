@@ -23,7 +23,13 @@
             <button type="submit" class="btn btn-primary fw-bold mt-2">
                 Entrar
             </button>
+
         </form>
+         {% for message in messages %}
+                 <div>
+                     <p id="messages">{{message}}</p>
+                 </div>
+         {% endfor %}
     </div>
 </div>
 

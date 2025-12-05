@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from associados.forms import AssociadoForm, LoginForms
 from django.contrib.auth.models import User
 from django.contrib import auth
+from django.contrib import messages
 
 
 def associados(request):
@@ -25,8 +26,11 @@ def login(request):
         if usuario is not None:
             # Se o usuário for autenticado com sucesso
             auth.login(request, usuario)
+            messages.success(request,f'{nome} logado com sucesso!')
             return redirect('beneficios')
-
+        else:
+            messages.error(request,'Erro ao efetuar o login!')
+            return redirect('login')
         # Se o login falhar (usuario é None), o fluxo continua para a linha
         # que renderiza o formulário com a variável 'form' (que pode ter erros).
 
@@ -39,6 +43,7 @@ def cadastro(request):
         form = AssociadoForm(request.POST)
         if form.is_valid():
             if form['senha_1'].value() != form['senha_2'].value():
+                 messages.error(request,'As senhas não são iguais!')
                  return redirect('cadastro')
             nome_completo = form['nome_completo'].value()
             nome_social = form['nome_social'].value()
@@ -54,6 +59,7 @@ def cadastro(request):
                 password=senha
             )
             associado.save()
+            messages.success(request,'Cadastrado efetuado com sucesso!')
             return redirect('login')
 
 

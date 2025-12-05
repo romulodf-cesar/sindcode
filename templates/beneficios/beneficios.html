@@ -6,5 +6,11 @@
 </head>
 <body>
     O usuário vai visualizar os benefícios...
+     {% csrf_token %}
+   {% for message in messages %}
+                 <div>
+                     <p id="messages">{{message}}</p>
+                 </div>
+   {% endfor %}
 </body>
 </html>
