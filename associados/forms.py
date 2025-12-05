@@ -29,7 +29,7 @@ class AssociadoForm(forms.Form):
     genero_outro = forms.CharField(
         label='Selecione "Outro" acima e especifique',
         max_length=100,
-        required=True,
+        required=False,
         help_text='Use apenas se a opção "Outro" tiver sido selecionada.'
     )
     email = forms.EmailField(
