@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'noticias.apps.NoticiasConfig',
     'associados.apps.AssociadosConfig',
+    'beneficios.apps.BeneficiosConfig',
 ]
 
 MIDDLEWARE = [
