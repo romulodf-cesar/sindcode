@@ -12,7 +12,9 @@
                 {% for field in form.visible_fields %}
 
                     <div class="col-12 col-lg-12" style="margin-bottom: 10px;"
-                         {% if field.name == 'genero_outro' %}id="div-genero-outro"{% endif %}>
+                         {% if field.name == 'genero_outro' %}
+                                 id="div-genero-outro"
+                         {% endif %}>
 
                         <label for="{{ field.id_for_label }}" style="color:#D9D9D9; margin-bottom: 5px;">{{field.label}}</label>
 
