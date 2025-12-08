@@ -167,18 +167,18 @@ id, nome, perfil.
 - Renderização de página
 
 #### ** Aula 2 - Formulários Django
-- Criando formulário
-- Estilizando formulário
-- Quebra de segurança CSRF
-- Classe Forms do Django
-- Exercícios
+- Criando formulário (ok)
+- Estilizando formulário (ok)
+- Quebra de segurança CSRF (ok)
+- Classe Forms do Django (ok)
+- Exercícios (ok)
 
 #### ** Aula 3 - Autenticação de Associados
-- Associados no Django
-- Lógica de Cadastro
-- Lógica de Login
-- Alertas e Mensagens
-- Logout
+- Associados no Django (ok)
+- Lógica de Cadastro (ok)
+- Lógica de Login (ok)
+- Alertas e Mensagens (produção)
+- Logout (produção)
 
 #### ** Aula 4 - Validações
 - Refatoração e Validação
