@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from associados.forms import AssociadoForm, LoginForms
 from django.contrib.auth.models import User
 from django.contrib import auth
+from django.contrib import messages
+
 
 
 def associados(request):
@@ -25,7 +27,11 @@ def login(request):
         if usuario is not None:
             # Se o usuário for autenticado com sucesso
             auth.login(request, usuario)
+            messages.success(request,usuario)
             return redirect('beneficios')
+        else:
+            messages.error(request, 'Usuário ou Senha inválida.')
+            return redirect('login')
 
         # Se o login falhar (usuario é None), o fluxo continua para a linha
         # que renderiza o formulário com a variável 'form' (que pode ter erros).
@@ -39,6 +45,7 @@ def cadastro(request):
         form = AssociadoForm(request.POST)
         if form.is_valid():
             if form['senha_1'].value() != form['senha_2'].value():
+                 messages.error(request, 'As senhas estão diferentes')
                  return redirect('cadastro')
             nome_completo = form['nome_completo'].value()
             nome_social = form['nome_social'].value()
@@ -46,6 +53,7 @@ def cadastro(request):
             email = form['email'].value()
             senha = form['senha_1'].value()
             if User.objects.filter(username=nome_completo).exists():
+                messages.error(request, 'Esse usuário já existe')
                 return redirect('cadastro')
             # criar um novo associado
             associado = User.objects.create_user(
@@ -54,8 +62,8 @@ def cadastro(request):
                 password=senha
             )
             associado.save()
+            messages.success(request, 'Cadastro efetuado com sucesso!')
             return redirect('login')
-
 
     return render(request, 'associados/cadastro.html',{'form': form})
 

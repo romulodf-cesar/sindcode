@@ -5,6 +5,12 @@
     <title>O Usuário vai ver os beneficios</title>
 </head>
 <body>
-    O usuário vai visualizar os benefícios...
+        {% for message in messages %}
+             <div>
+                 <p id="messages">{{message}}</p>
+             </div>
+        {% endfor %}
+        Aproveite os nossos beneficios....
+
 </body>
 </html>

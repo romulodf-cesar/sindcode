@@ -24,6 +24,12 @@
                 Entrar
             </button>
         </form>
+
+        {% for message in messages %}
+             <div>
+                 <p id="messages">{{message}}</p>
+             </div>
+        {% endfor %}
     </div>
 </div>
 
