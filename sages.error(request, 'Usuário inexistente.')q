@@ -1,0 +1,289 @@
+[33mcommit f6a740657748dc7af63bdf427e1da4b82149a724[m[33m ([m[1;36mHEAD -> [m[1;32mdjango_avancado_aula10[m[33m, [m[1;31msenai/django_avancado_aula9[m[33m, [m[1;32mdjango_avancado_aula9[m[33m)[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Mon Dec 8 10:52:54 2025 -0300
+
+    messages concluídos com sucesso!
+
+[33mcommit 243f362cc603facae66e9ea85463fb7f28e2b98b[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Mon Dec 8 09:51:32 2025 -0300
+
+    sinalizando ok para tópicos do curso
+
+[33mcommit b513860c376d3cec7020c0b975577653d0fd052f[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Fri Dec 5 10:48:39 2025 -0300
+
+    logando ok
+
+[33mcommit 0297b2353ffe46747bf60669b8820e479d7028b3[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Fri Dec 5 09:50:05 2025 -0300
+
+    encerramos aula 8
+
+[33mcommit f11480b10105bc01528d63e961200b5317225cb6[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Fri Dec 5 09:13:07 2025 -0300
+
+    salvando a tela de login
+
+[33mcommit 912f6c633e1a50e83eface2f87fa15c07c9654f4[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Fri Dec 5 08:52:40 2025 -0300
+
+    slides
+
+[33mcommit 18ab09f3640a57666df470f8c5cade49cde688c2[m[33m ([m[1;32mdjango_avancado_aula7[m[33m)[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Tue Dec 2 12:09:59 2025 -0300
+
+    aula 7 concluida
+
+[33mcommit b3ab19cbe26679affc78cf561017972ddb2fb7c9[m[33m ([m[1;31msenai/django_avancado_aula7[m[33m)[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Tue Dec 2 11:01:39 2025 -0300
+
+    tela de login redirecionada
+
+[33mcommit 06a2349c900d450bf3a24cfbda900fc8de7ab618[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Tue Dec 2 10:28:52 2025 -0300
+
+    encerrando aula 7
+
+[33mcommit c398e3d2eca74fe8f55566a37fc355efe04d3f52[m[33m ([m[1;31msenai/django_avancado_aula6[m[33m, [m[1;32mdjango_avancado_aula6[m[33m)[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Mon Dec 1 09:57:28 2025 -0300
+
+    django aula 6 concluída
+    
+    atualizamos o front-end
+
+[33mcommit b0626e38073748680fb8afd9138958efb44e0d6d[m[33m ([m[1;31morigin/django_avancado_aula6[m[33m)[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Fri Nov 28 10:25:05 2025 -0300
+
+    criei o formulário com CSRF
+
+[33mcommit e675918b12846bfb9ae41a5584df586c51779002[m[33m ([m[1;31morigin/django_avancado_aula5[m[33m, [m[1;32mdjango_avancado_aula5[m[33m)[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Fri Nov 28 08:59:39 2025 -0300
+
+    avaliação 01
+
+[33mcommit 04dd5d02d870bf3d77211043954d578ab468411f[m[33m ([m[1;31msenai/django_avancado_aula5[m[33m)[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Wed Nov 26 11:33:59 2025 -0300
+
+    planejamento das 60 horas
+
+[33mcommit f8f6c4de945b95757b2d26e975017caa627af577[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Wed Nov 26 11:15:15 2025 -0300
+
+    ambientação aula 5
+
+[33mcommit 8181974b1ac06c5aefe9b81e2e939062f572164c[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Tue Nov 25 08:46:28 2025 -0300
+
+    destaque 0 ok
+
+[33mcommit 1adfc01b42128fb7491321a4e625eb94314afbaf[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Mon Nov 24 12:34:18 2025 -0300
+
+    ok
+
+[33mcommit f6149ffbf4a3940b829f877c5dc44618aaa24727[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Mon Nov 24 11:03:49 2025 -0300
+
+    trabalhando
+
+[33mcommit f2c60f55df400d3c882c1952865cc47a88b15ca0[m[33m ([m[1;31msenai/django_avancado_aula3[m[33m, [m[1;32mdjango_avancado_aula3[m[33m)[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Mon Nov 24 10:22:58 2025 -0300
+
+    finalizando buscar
+
+[33mcommit 7d82d799077b9d11df56b0bfc72a5719bc8ce7da[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Wed Nov 19 11:43:05 2025 -0300
+
+    desafio 2 - gabarito
+
+[33mcommit a94bddcabc7a1b0f843e793c6c83bf6990b751c3[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Wed Nov 19 11:24:04 2025 -0300
+
+    feature
+
+[33mcommit af1edc8499f6bf86fa1740fb86d5e4f8477e502e[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Tue Nov 18 10:13:22 2025 -0300
+
+    concluiu buscar e admin
+
+[33mcommit f62f7c02806857296cdeea1f14fafe6636e89172[m[33m ([m[1;32mdjango_avancado_aula1[m[33m)[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Mon Nov 17 12:00:26 2025 -0300
+
+    navegando buscar
+
+[33mcommit 6401455abc7b63de609b989f1d9f26aa9a625fe3[m[33m ([m[1;31msenai/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Wed Nov 12 12:09:23 2025 -0300
+
+    adeus sindcode
+
+[33mcommit 2d81579689baba6a65522dae95c3d2a1f9e2d114[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Mon Nov 10 16:55:53 2025 -0300
+
+    noticias
+
+[33mcommit c85be1a4917bb7a94eda14e8f0425eec7f765565[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Wed Nov 5 09:00:22 2025 -0300
+
+    ok
+
+[33mcommit 988bb4d25b92cd1ecfa56b93639f0b7c97a151f0[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Tue Nov 4 12:03:48 2025 -0300
+
+    ok
+
+[33mcommit c733913111a6bbff995a8424004604232ca01340[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Tue Nov 4 08:57:03 2025 -0300
+
+    aula admin
+
+[33mcommit 60c71fa07dee01c872ca99ea60733610e62d5b54[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Mon Nov 3 12:32:59 2025 -0300
+
+    ok
+
+[33mcommit 8a94d235164169b0e0dc21980c3c5874a62f5800[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Mon Nov 3 12:28:15 2025 -0300
+
+    ok
+
+[33mcommit 17d8580980795fb386b9957bf78d96f201bf2548[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Mon Nov 3 12:17:27 2025 -0300
+
+    ok
+
+[33mcommit f461edc3e01489867dfd9a672625ac72a739fb37[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Mon Nov 3 11:54:42 2025 -0300
+
+    ok
+
+[33mcommit 9eb12ba1f75b6b0f8373c5cbfc15b9624827fc5f[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Mon Nov 3 11:36:29 2025 -0300
+
+    conclui style
+
+[33mcommit c2262e49e5da4711ef630987348a1c7db0ede462[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Mon Nov 3 11:12:34 2025 -0300
+
+    conclui style
+
+[33mcommit 627c80d6ba7dd77825caa01a1a89635ba4d8ddd4[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Fri Oct 31 12:30:16 2025 -0300
+
+    ok
+
+[33mcommit 71444af596796e329e62666ebc285c320e95e6d3[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Thu Oct 30 11:56:04 2025 -0300
+
+    aula models
+
+[33mcommit 5e0953fbf95d0005d8cf3fe1f46e97c581de512a[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Wed Oct 29 11:57:56 2025 -0300
+
+    ok
+
+[33mcommit 6e727c95d3166b559d39313ac1a1cb502f666d82[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Wed Oct 29 09:36:28 2025 -0300
+
+    conteúdo enviado para a turma no dia 29/10/2025
+
+[33mcommit 606f9c551594b2e05ffdf657eb826c261f64f012[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Tue Oct 28 11:18:56 2025 -0300
+
+    concluindo site estático
+
+[33mcommit 451f196710b931f5261c4db4dacee20c4d454ed3[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Mon Oct 27 12:32:18 2025 -0300
+
+    url ok
+
+[33mcommit 64e66dedbca736df1e78efd308412a135e1d2f3a[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Thu Oct 23 12:02:11 2025 -0300
+
+    ok
+
+[33mcommit d8df6e7b0e8ee6cdfabb0cd620dab098674307c6[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Tue Oct 21 12:22:55 2025 -0300
+
+    ok
+
+[33mcommit 4e19153e7824740196420f2a07ac58cd945b531b[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Mon Oct 20 18:01:36 2025 -0300
+
+    banco ok
+
+[33mcommit 001d1a9817eb21984543784add74f14e0bdba31e[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Mon Oct 20 08:25:51 2025 -0300
+
+    teste
+
+[33mcommit c2b746d6cf9d650f901275e40b408ffc8c5cfdb1[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Fri Oct 17 11:50:42 2025 -0300
+
+    SCRUM-11 criei o app sem instalar #done
+
+[33mcommit d8e1500508613094cf4f4a63424c628a9d902f87[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Fri Oct 17 10:54:52 2025 -0300
+
+    SCRUM-17 aprender criar aplicativo Django #done
+
+[33mcommit b900bfa1381897c5e24945cbaf688482bb6b7b32[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Fri Oct 17 10:48:02 2025 -0300
+
+    SCRUM-16 aprendi a vincular #done
+
+[33mcommit 7e227518a367a546f7e72265f8426b5aa8afc882[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Fri Oct 17 09:42:12 2025 -0300
+
+    SCRUM-10 conclui o gitignore e o README.md com boas práticas #done
+
+[33mcommit 6362184cb43ba7afb78d6fc6db3b5f28bf929f28[m
+Author: romulodf-cesar <romulodf.cesar@gmail.com>
+Date:   Thu Oct 16 10:19:19 2025 -0300
+
+    SCRUM-8 idioma e timezone finalizado. #done
