@@ -177,8 +177,8 @@ id, nome, perfil.
 - Associados no Django (ok)
 - Lógica de Cadastro (ok)
 - Lógica de Login (ok)
-- Alertas e Mensagens (produção)
-- Logout (produção)
+- Alertas e Mensagens (ok)
+- Logout (ok)
 
 #### ** Aula 4 - Validações
 - Refatoração e Validação
