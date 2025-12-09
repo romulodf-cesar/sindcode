@@ -181,16 +181,16 @@ id, nome, perfil.
 - Logout (ok)
 
 #### ** Aula 4 - Validações
-- Refatoração e Validação
-- Associando tabelas
-- Validação clean
-- Mensagem de erro
+- Refatoração e Validação (ok)
+- Associando tabelas (ok)
+- Mensagem de erro (ok)
+- Validação clean (produção - espaços em branco)
 
 #### ** Aula 5 - Refatoração
 
-- Partial para alertas
-- Reorganizando diretórios
-- Concluindo o App Associados
+- Partial para alertas (constants) - (produção )
+- Reorganizando diretórios - partials 
+- Concluindo o App Associados -
 
 #### ** Aula 6 - Autenticação com OAuth 2.0
 - Servidor
