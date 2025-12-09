@@ -10,6 +10,7 @@ def associados(request):
     return render(request, 'associados/index.html')
 
 
+
 def login(request):
     form = LoginForms(request.POST)
 
@@ -39,6 +40,14 @@ def login(request):
     # Se a requisição não for POST (é GET, ou POST falhou)
     return render(request, 'associados/login.html', {'form': form})
 
+def logout(request):
+    # não esquecer do request.. requisição
+    # redirecionamento - redirect
+    # logout com sucesso (mensagem)
+    # redirecionar para página de login.
+    auth.logout(request)
+    messages.success(request,'Logout efetuado com sucesso')
+    return redirect('login')
 def cadastro(request):
     form = AssociadoForm()
     if request.method == 'POST':

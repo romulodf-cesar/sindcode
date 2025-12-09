@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>O Usuário vai ver os beneficios</title>
-</head>
-<body>
+{% extends 'noticias/base.html' %}
+{% load static %}
+
+{% block content %}
+
         {% for message in messages %}
              <div>
                  <p id="messages">{{message}}</p>
              </div>
         {% endfor %}
         Aproveite os nossos beneficios....
-
-</body>
-</html>
+             {% csrf_token %}
+{% endblock %}
