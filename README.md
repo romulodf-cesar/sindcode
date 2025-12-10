@@ -184,7 +184,7 @@ id, nome, perfil.
 - Refatoração e Validação (ok)
 - Associando tabelas (ok)
 - Mensagem de erro (ok)
-- Validação clean (produção - espaços em branco)
+- Validação clean (produção - espaços em branco) (ok)
 
 #### ** Aula 5 - Refatoração
 
