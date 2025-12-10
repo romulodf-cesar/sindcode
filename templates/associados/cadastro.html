@@ -21,6 +21,13 @@
                         {{ field }}
 
                     </div>
+                    {% for error in field.errors %}
+                         {% if error %}
+                              <div class="alert alert-danger mt-1">
+                                  {{ error }}
+                             </div>
+                         {% endif %}
+                    {% endfor%}
                 {% endfor %}
              </div>
             <button class="btn btn-success col-12" style="padding: top 5px;">Cadastrar</button>
@@ -28,44 +35,6 @@
     </div>
 </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // ID do campo de seleção de gênero (identidade_genero)
-        const generoSelect = document.getElementById('id_identidade_genero');
 
-        // ID do DIV que envolve o campo 'Outro' (genero_outro)
-        const generoOutroDiv = document.getElementById('div-genero-outro');
-
-        // Se um dos elementos não for encontrado, o script pode parar.
-        if (!generoSelect || !generoOutroDiv) {
-            console.error("ERRO: Elementos do formulário não encontrados. Verifique os IDs no HTML.");
-            return; // Sai da função
-        }
-
-        const VALOR_OUTRO = 'O';
-
-        function toggleOutroField() {
-            // Se o valor selecionado for 'O' (Outro), mostra; caso contrário, esconde.
-            generoOutroDiv.style.display = (generoSelect.value === VALOR_OUTRO) ? 'block' : 'none';
-
-            // Opcional: Limpa o valor do campo 'genero_outro' quando ele é escondido
-            if (generoSelect.value !== VALOR_OUTRO) {
-                 // Assumindo que o campo 'genero_outro' é um input dentro do div.
-                 // Você pode precisar de uma forma mais direta de acessar o input.
-                 // Aqui, tentamos uma abordagem segura, mas pode precisar de ajuste.
-                 const inputOutro = generoOutroDiv.querySelector('input');
-                 if (inputOutro) {
-                    inputOutro.value = '';
-                 }
-            }
-        }
-
-        // Executa na carga da página
-        toggleOutroField();
-
-        // Adiciona um evento para monitorar a mudança no dropdown
-        generoSelect.addEventListener('change', toggleOutroField);
-    });
-</script>
 
 {% endblock %}

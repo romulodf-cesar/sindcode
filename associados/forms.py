@@ -1,4 +1,6 @@
 from django import forms
+
+
 class AssociadoForm(forms.Form):
     GENERO_CHOICES = (
         ('', 'Escolha um Genero'),
@@ -8,21 +10,28 @@ class AssociadoForm(forms.Form):
         ('O', 'Outro'),
         ('PND', 'Prefiro Não Declarar'),
     )
+
     nome_completo = forms.CharField(
-        label="Nome completo",
+        label="Usuário (tudo junto, sem espaço)",
         required=True,
-        max_length=100)
+        max_length=100,
+        error_messages={'required': ''},  # Adicionei uma mensagem
+    )
+
     nome_social = forms.CharField(
         label="Nome social (como você prefere ser chamado (a)",
         required=False,
-        max_length=100
+        max_length=100,
+        error_messages={'required': ''},  # Adicionei uma mensagem
     )
+
     # --- CAMPO 3: IDENTIDADE DE GÊNERO ---
     identidade_genero = forms.ChoiceField(
         label='Qual sua identidade de gênero?',
         choices=GENERO_CHOICES,
         widget=forms.Select(attrs={'class': 'form-control'}),
-        required=True  # Permitir que a pessoa não declare, embora haja 'Prefiro Não Declarar'
+        required=True,
+        error_messages={'required': ''}
     )
 
     # Campo para a opção 'Outro'
@@ -30,8 +39,10 @@ class AssociadoForm(forms.Form):
         label='Selecione "Outro" acima e especifique',
         max_length=100,
         required=False,
-        help_text='Use apenas se a opção "Outro" tiver sido selecionada.'
+        help_text='Use apenas se a opção "Outro" tiver sido selecionada.',
+        error_messages={'required': ''}
     )
+
     email = forms.EmailField(
         label="E-mail",
         required=True,
@@ -39,9 +50,9 @@ class AssociadoForm(forms.Form):
         widget=forms.EmailInput(attrs={'class': 'form-control',
                                        'placeholder': 'Digite seu e-mail'
                                        }),
-
-
+        error_messages={'required': ''}
     )
+
     senha_1 = forms.CharField(
         label='Senha',
         required=True,
@@ -52,10 +63,11 @@ class AssociadoForm(forms.Form):
                 'placeholder': 'Digite sua senha',
             }
         ),
+        error_messages={'required': ''}
     )
 
     senha_2 = forms.CharField(
-        label='Senha',
+        label='Confirmação de Senha',  # Ajustei o label para melhor clareza
         required=True,
         max_length=70,
         widget=forms.PasswordInput(
@@ -64,19 +76,37 @@ class AssociadoForm(forms.Form):
                 'placeholder': 'Confirme sua senha',
             }
         ),
+        error_messages={'required': ''}
     )
+
+    # o Django só entende se seguir o padrão
+    # clean e o nome do campo que você quer..
+    def clean_nome_completo(self):
+        nome = self.cleaned_data.get("nome_completo")
+        if nome:
+            nome = nome.strip()
+            # O trecho abaixo estava verificando se a string vazia "" está em 'nome'.
+            # Para verificar se há espaços em branco, o correto é verificar ' ' (espaço).
+            # Se a intenção é que seja tudo junto, sem espaços, use:
+            if ' ' in nome:
+                raise forms.ValidationError("não pode ter espaço em branco")
+            return nome
+        else:
+            # Se o campo for obrigatório, esta validação não será acionada se estiver vazio
+            # porque o `required=True` já cuidará disso, mas é bom manter a consistência.
+            return nome
+
 
 class LoginForms(forms.Form):
     nome_login = forms.CharField(
-            label='Nome de Login',
-            required=True,
-            max_length=100
-        )
+        label='Nome de Login',
+        required=True,
+        max_length=100
+    )
 
     senha = forms.CharField(
         label='Senha',
         required=True,
         max_length=70,
-        widget = forms.PasswordInput()
+        widget=forms.PasswordInput()
     )
-
