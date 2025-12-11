@@ -76,3 +76,4 @@ def cadastro(request):
 
     return render(request, 'associados/cadastro.html',{'form': form})
 
+

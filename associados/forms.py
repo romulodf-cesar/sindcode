@@ -96,7 +96,15 @@ class AssociadoForm(forms.Form):
             # porque o `required=True` já cuidará disso, mas é bom manter a consistência.
             return nome
 
+    def clean_senha_2(self):
+        senha_1 = self.cleaned_data.get('senha_1')
+        senha_2 = self.cleaned_data.get('senha_2')
 
+        if senha_1 and senha_2:
+            if senha_1 != senha_2:
+                raise forms.ValidationError('Senhas não são iguais')
+            else:
+                return senha_2
 class LoginForms(forms.Form):
     nome_login = forms.CharField(
         label='Nome de Login',
